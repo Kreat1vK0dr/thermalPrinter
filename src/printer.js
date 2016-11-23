@@ -3,7 +3,7 @@ var util = require('util'),
 	EventEmitter = require('events').EventEmitter,
 	fs = require('fs'),
 	getPixels = require('get-pixels'),
-	deasync = require('deasync'),
+// 	deasync = require('deasync'),
 	async = require('async'),
 	helpers = require('./helpers'),
 	specialChars = require('./specialChars.js'),
@@ -341,7 +341,7 @@ Printer.prototype.printImage = function(path){
 	});
 	// deasync getPixels
 	while(!done) {
-		deasync.runLoopOnce();
+// 		deasync.runLoopOnce();
 	}
 	return this;
 };
