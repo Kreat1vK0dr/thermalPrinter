@@ -59,11 +59,6 @@ var Printer = function(serialPort, opts) {
 	this.commandQueue = [];
 	// printmode bytes (normal by default)
 	this.printMode = 0;
-
-	var _self = this;
-	this.reset().sendPrintingParams().setCharset(this.charset).print(function() {
-		_self.emit('ready');
-	});
 };
 util.inherits(Printer, EventEmitter);
 
